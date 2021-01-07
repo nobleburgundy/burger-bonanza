@@ -15,4 +15,5 @@ router.get("/", function (req, res) {
   });
 });
 
+// Export the routes for server.js
 module.exports = router;
