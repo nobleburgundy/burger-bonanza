@@ -1,3 +1,4 @@
+const { connect } = require("./connection");
 const connection = require("./connection");
 
 const orm = {
@@ -8,8 +9,12 @@ const orm = {
       cb(data);
     });
   },
-  insertOne: function () {
-    console.log("orm insertOne()");
+  insertOne: function (val, cb) {
+    const queryString = `INSERT INTO burgers (burger_name, devoured) VALUES (?, false)`;
+    connection.query(queryString, [val], function (err, result) {
+      if (err) throw err;
+      cb(result);
+    });
   },
   updateOne: function () {
     console.log("orm updateOne");

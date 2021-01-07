@@ -8,5 +8,10 @@ router.get("/", function (req, res) {
   });
 });
 
+router.post("/api/burgers", function (req, res) {
+  burger.add(req.body.burger_name, function (result) {
+    res.json({ id: result.id });
+  });
+});
 // Export the routes for server.js
 module.exports = router;

@@ -1,12 +1,13 @@
 <h1>Burger Bonanza</h1>
 
-<h2>All the burgers:</h2>
-
-<ul>
-    {{#each burgers}}
-    <li>{{burger_name}}</li>
-    {{/each}}
-</ul>
+<div class="waiting-area-div">
+    <h4>Waiting To Be Devoured</h4>
+    <ul>
+        {{#each burgers}}
+        <li>{{burger_name}}</li>
+        {{/each}}
+    </ul>
+</div>
 
 <form class="add-burger-form">
     <label for="burger-input">New burger you'd like to eat:</label>

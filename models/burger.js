@@ -6,6 +6,11 @@ const burger = {
       cb(result);
     });
   },
+  add: function (burger, cb) {
+    orm.insertOne(burger, function (result) {
+      cb(result);
+    });
+  },
 };
 
 module.exports = burger;
