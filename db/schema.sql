@@ -1,4 +1,3 @@
-DROP TABLE IF EXISTS burgers;
 DROP DATABASE IF EXISTS burger_db;
 
 CREATE DATABASE burger_db;
