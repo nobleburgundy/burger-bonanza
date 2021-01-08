@@ -1,29 +1,39 @@
 <div class="row">
-    <div class="six columns waiting-area-div">
-        <h4>Waiting To Be Devoured</h4>
+    <div class="six columns waiting-area">
+        <h2>Waiting To Be Devoured</h2>
+        <small><i>Click to devour</i></small>
         <ul class="waiting-list">
             {{#each burgers}}
             {{#unless devoured}}
-            <li><button class="burger-button" data-id="{{id}}">{{burger_name}}</button></li>
+            <li><button class="burger-button waiting" data-id="{{id}}"
+                    data-devoured="{{devoured}}">{{burger_name}}</button>
+            </li>
             {{/unless}}
             {{/each}}
         </ul>
     </div>
 
     <div class="six columns devoured-area">
-        <h4>Devoured</h4>
+        <h2>Devoured</h2>
+        <small>Click to add to Waiting List</small>
         <ul class="waiting-list">
             {{#each burgers}}
             {{#if devoured}}
-            <li><button class="burger-button" data-id="{{id}}">{{burger_name}}</button></li>
+            <li><button class="burger-button devoured" data-id="{{id}}"
+                    data-devoured="{{devoured}}">{{burger_name}}</button>
+            </li>
             {{/if}}
             {{/each}}
         </ul>
     </div>
 </div>
 
-<form class="add-burger-form">
-    <label for="burger-input">New burger you'd like to eat:</label>
-    <input id="burger-input" type="text" />
-    <button type="submit">Add Burger</button>
-</form>
+<div class="row">
+    <div class="12 columns">
+        <form class="add-burger-form">
+            <label for="burger-input">New burger you'd like to eat:</label>
+            <input id="burger-input" type="text" />
+            <button class="add-button" type="submit">Add Burger</button>
+        </form>
+    </div>
+</div>

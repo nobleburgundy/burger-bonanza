@@ -14,10 +14,11 @@ $(function () {
   });
 
   // Handle burger button click - update 'this' burger to devoured=true
-  $(".burger-button").on("click", function (event) {
+  $(".burger-button").on("click", function () {
     const currentBurgerId = $(this).data("id");
-    const devouredVal = { devoured: true };
-    $.ajax(`/api/burgers/${currentBurgerId}`, { type: "PUT", data: devouredVal }).then(function () {
+    const devouredVal = $(this).data("devoured") === 0;
+    const objToSend = { devoured: devouredVal };
+    $.ajax(`/api/burgers/${currentBurgerId}`, { type: "PUT", data: objToSend }).then(function () {
       console.log(`Burger id ${currentBurgerId} updated to devoured=true`);
       location.reload();
     });

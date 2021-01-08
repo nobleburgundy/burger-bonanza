@@ -2,7 +2,8 @@ const connection = require("./connection");
 
 const orm = {
   selectAll: function (table, cb) {
-    const query = "SELECT * FROM " + table + ";";
+    // Get all the burgers, then order by DESC so newest on top
+    const query = "SELECT * FROM " + table + " ORDER BY id DESC;";
     connection.query(query, function (error, data) {
       if (error) throw error;
       cb(data);
