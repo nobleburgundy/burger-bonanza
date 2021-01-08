@@ -12,4 +12,14 @@ $(function () {
       location.reload();
     });
   });
+
+  // Handle burger button click - update 'this' burger to devoured=true
+  $(".burger-button").on("click", function (event) {
+    const currentBurgerId = $(this).data("id");
+    const devouredVal = { devoured: true };
+    $.ajax(`/api/burgers/${currentBurgerId}`, { type: "PUT", data: devouredVal }).then(function () {
+      console.log(`Burger id ${currentBurgerId} updated to devoured=true`);
+      location.reload();
+    });
+  });
 });

@@ -1,4 +1,3 @@
-const { connect } = require("./connection");
 const connection = require("./connection");
 
 const orm = {
@@ -16,8 +15,13 @@ const orm = {
       cb(result);
     });
   },
-  updateOne: function () {
-    console.log("orm updateOne");
+  updateOne: function (table, objectColumnValues, condition, cb) {
+    const queryString = `UPDATE ?? SET ? WHERE ?`;
+
+    connection.query(queryString, [table, objectColumnValues, condition], function (error, result) {
+      if (error) throw error;
+      cb(result);
+    });
   },
 };
 

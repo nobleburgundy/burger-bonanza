@@ -11,6 +11,11 @@ const burger = {
       cb(result);
     });
   },
+  update: function (objectColumnValues, condition, cb) {
+    orm.updateOne("burgers", objectColumnValues, condition, function (result) {
+      cb(result);
+    });
+  },
 };
 
 module.exports = burger;
