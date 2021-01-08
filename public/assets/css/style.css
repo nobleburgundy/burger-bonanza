@@ -1,7 +1,38 @@
-.jumbotron {
+h2 {
+    font-size: 3rem;
+    margin-bottom: 1%;
+}
+
+#burger-input {
     width: 50%;
-    margin: auto;
+}
+
+button {
+    width: 300px;
+    border-radius: 0;
+    border: none;
+}
+
+.waiting {
+    background-color: #ffba08;
+}
+
+.jumbotron {
+    min-width: 380px;
     display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.devoured {
+    background-color: #e63946;
+    color: #ffffff;
+}
+
+.add-button {
+    color: #ffba08;
+    background-color: #e63946;
+    width: auto;
 }
 
 #logo {
@@ -10,4 +41,16 @@
 
 ul {
     list-style: none;
+}
+
+.columns {
+    min-width: 300px;
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 700px) {
+    .jumbotron {
+        width: 500px;
+    }
 }
