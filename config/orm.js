@@ -24,6 +24,13 @@ const orm = {
       cb(result);
     });
   },
+  deleteOne: function (table, condition, cb) {
+    const queryString = "DELETE FROM ?? WHERE ?";
+    connection.query(queryString, [table, condition], function (err, result) {
+      if (err) throw err;
+      cb(result);
+    });
+  },
 };
 
 module.exports = orm;

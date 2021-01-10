@@ -23,4 +23,15 @@ $(function () {
       location.reload();
     });
   });
+
+  $(".delete-button").on("click", function () {
+    const currentBurgerId = $(this).data("id");
+    const currentBurgerName = $(this).data("name");
+    if (confirm(`Are you sure you want to delete the ${currentBurgerName}?`)) {
+      $.ajax(`/api/burgers/${currentBurgerId}`, { type: "DELETE" }).then(function () {
+        console.log(`Burger with id ${currentBurgerId} deleted`);
+        location.reload();
+      });
+    }
+  });
 });

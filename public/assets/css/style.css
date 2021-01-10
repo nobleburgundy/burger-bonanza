@@ -11,6 +11,7 @@ button {
     width: 300px;
     border-radius: 0;
     border: none;
+    float: right;
 }
 
 .waiting {
@@ -47,6 +48,12 @@ ul {
     min-width: 300px;
     width: 100%;
     text-align: center;
+}
+
+.delete-button {
+    width: 40px;
+    border: 1px solid black;
+    padding: 0;
 }
 
 @media (min-width: 700px) {
