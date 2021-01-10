@@ -52,8 +52,14 @@ ul {
 
 .delete-button {
     width: 40px;
-    border: 1px solid black;
+    font-size: 2rem;
+    /* border: 1px solid black; */
+    opacity: 0;
     padding: 0;
+}
+
+li:hover .delete-button {
+    opacity: 0.4;
 }
 
 @media (min-width: 700px) {
