@@ -8,10 +8,12 @@ h2 {
 }
 
 button {
-    width: 300px;
     border-radius: 0;
     border: none;
-    float: right;
+}
+
+.burger-button {
+    width: 300px;
 }
 
 .waiting {
@@ -51,19 +53,26 @@ ul {
 }
 
 .delete-button {
-    width: 40px;
+    width: 10px;
     font-size: 2rem;
-    /* border: 1px solid black; */
-    opacity: 0;
-    padding: 0;
 }
 
-li:hover .delete-button {
+/* Show the trash icon when burger button is hovered over */
+.burger-button:hover+.delete-button {
     opacity: 0.4;
+}
+
+/* Make the button more opaque when directly hovered on */
+.delete-button:hover {
+    opacity: 1.0;
 }
 
 @media (min-width: 700px) {
     .jumbotron {
         width: 500px;
+    }
+
+    .delete-button {
+        opacity: 0;
     }
 }

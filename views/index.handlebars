@@ -5,9 +5,9 @@
         <ul class="waiting-list">
             {{#each burgers}}
             {{#unless devoured}}
-            <li><button class="delete-button" data-id="{{id}}" data-name="{{burger_name}}"><i
-                        class="fas fa-trash"></i></button><button class="burger-button waiting" data-id="{{id}}"
-                    data-devoured="{{devoured}}">{{burger_name}}</button>
+            <li><button class="burger-button waiting" data-id="{{id}}"
+                    data-devoured="{{devoured}}">{{burger_name}}</button><button class="delete-button" data-id="{{id}}"
+                    data-name="{{burger_name}}"><i class="fas fa-trash"></i></button>
             </li>
             {{/unless}}
             {{/each}}
@@ -20,9 +20,9 @@
         <ul class="waiting-list">
             {{#each burgers}}
             {{#if devoured}}
-            <li><button class="delete-button" data-id="{{id}}" data-name="{{burger_name}}"><i
-                        class="fas fa-trash"></i></button><button class="burger-button devoured" data-id="{{id}}"
-                    data-devoured="{{devoured}}">{{burger_name}}</button>
+            <li><button class="burger-button devoured" data-id="{{id}}"
+                    data-devoured="{{devoured}}">{{burger_name}}</button><button class="delete-button" data-id="{{id}}"
+                    data-name="{{burger_name}}"><i class="fas fa-trash"></i></button>
             </li>
             {{/if}}
             {{/each}}
