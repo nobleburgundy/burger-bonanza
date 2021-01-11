@@ -24,6 +24,7 @@ $(function () {
     });
   });
 
+  // Handle delete button click with confirm asking 'if sure'
   $(".delete-button").on("click", function () {
     const currentBurgerId = $(this).data("id");
     const currentBurgerName = $(this).data("name");

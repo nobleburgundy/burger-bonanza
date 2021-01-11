@@ -1,6 +1,7 @@
 const mysql = require("mysql");
 let connection;
 
+// JawsDB add-on used for Heroku deployed database
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {

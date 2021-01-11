@@ -53,13 +53,17 @@ ul {
 }
 
 .delete-button {
-    width: 10px;
+    width: 15px;
     font-size: 2rem;
 }
 
 /* Show the trash icon when burger button is hovered over */
+li:hover .delete-button {
+    display: inline;
+}
+
 .burger-button:hover+.delete-button {
-    opacity: 0.4;
+    opacity: 0.1;
 }
 
 /* Make the button more opaque when directly hovered on */
@@ -73,6 +77,6 @@ ul {
     }
 
     .delete-button {
-        opacity: 0;
+        display: none;
     }
 }
