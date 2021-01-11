@@ -1,20 +1,17 @@
-* {
-    font-family: 'Raleway', sans-serif;
-}
-
 h1 {
+    font-family: 'Raleway', sans-serif;
     font-size: 5rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 4rem;
     margin-bottom: 1%;
 }
 
-#burger-input {
+/* #burger-input {
     width: 50%;
     padding: 1%;
-}
+} */
 
 button {
     border-radius: 0;
@@ -24,6 +21,8 @@ button {
 .burger-button {
     width: 100%;
     padding: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
 }
 
 .btn-group {
@@ -47,10 +46,7 @@ button {
 }
 
 .add-burger-form {
-    width: 80%;
-    margin-left: auto;
-    margin-top: 2%;
-    margin-bottom: 10%;
+    margin-top: 5%;
 }
 
 .add-button {
@@ -58,7 +54,6 @@ button {
     background-color: #e63946;
     width: auto;
     opacity: 0.8;
-    border: 1px solid black;
 }
 
 .add-button:hover {
@@ -94,6 +89,7 @@ li:hover .delete-button {
     display: inline;
 }
 
+/* Show the dimmed version of the delete icon when sibling burger button is hovered over */
 .burger-button:hover+.delete-button {
     opacity: 0.1;
 }
@@ -103,10 +99,23 @@ li:hover .delete-button {
     opacity: 1.0;
 }
 
+small {
+    font-style: italic;
+}
+
 /* On large desktop devices, hide the delete button until hovering */
+/* Make h2s smaller since side by side */
 @media (min-width: 1000px) {
+    h2 {
+        font-size: 2rem;
+    }
+
     .delete-button {
         display: none;
+    }
+
+    .burger-button {
+        font-size: 1rem;
     }
 }
 

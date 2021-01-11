@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-lg waiting-area">
         <h2>Waiting To Be Devoured</h2>
-        <small><i>Click to devour</i></small>
+        <small>Click to devour</small>
         <ul class="waiting-list">
             {{#each burgers}}
             {{#unless devoured}}
@@ -35,11 +35,11 @@
 </div>
 
 <div class="row">
-    <div class="col-12">
-        <form class="add-burger-form">
-            <div class="input-group">
-                <input id="burger-input" type="text" placeholder="Enter a new burger you'd like to devour..."
-                    maxlength="255" minlength="2" />
+    <div class="col-md-6 mx-auto form-group">
+        <form class="add-burger-form ">
+            <div class="input-group d-flex justify-content-center">
+                <input class="form-control" id="burger-input" type="text"
+                    placeholder="Enter a new burger you'd like to devour..." maxlength="255" minlength="2" />
                 <div class="input-group-append">
                     <button class="add-button" type="submit">Add Burger</button>
                 </div>
