@@ -1,10 +1,19 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
 h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 1%;
 }
 
 #burger-input {
     width: 50%;
+    padding: 1%;
 }
 
 button {
@@ -13,14 +22,19 @@ button {
 }
 
 .burger-button {
-    width: 300px;
+    width: 100%;
+    padding: 2%;
+}
+
+.btn-group {
+    width: 100%;
 }
 
 .waiting {
     background-color: #ffba08;
 }
 
-.jumbotron {
+.jumbo {
     min-width: 380px;
     display: block;
     margin: auto;
@@ -32,10 +46,23 @@ button {
     color: #ffffff;
 }
 
+.add-burger-form {
+    width: 80%;
+    margin-left: auto;
+    margin-top: 2%;
+    margin-bottom: 10%;
+}
+
 .add-button {
     color: #ffba08;
     background-color: #e63946;
     width: auto;
+    opacity: 0.8;
+    border: 1px solid black;
+}
+
+.add-button:hover {
+    opacity: 1.0;
 }
 
 #logo {
@@ -44,6 +71,11 @@ button {
 
 ul {
     list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 2%;
 }
 
 .columns {
@@ -53,8 +85,8 @@ ul {
 }
 
 .delete-button {
-    width: 15px;
-    font-size: 2rem;
+    width: 50px;
+    background-color: #ffffff;
 }
 
 /* Show the trash icon when burger button is hovered over */
@@ -71,12 +103,19 @@ li:hover .delete-button {
     opacity: 1.0;
 }
 
-@media (min-width: 700px) {
-    .jumbotron {
-        width: 500px;
-    }
-
+/* On large desktop devices, hide the delete button until hovering */
+@media (min-width: 1000px) {
     .delete-button {
         display: none;
+    }
+}
+
+/* Always show the delete icon on devices with a touch screen */
+@media (pointer:coarse) {
+    .delete-button {
+        display: inline;
+        font-size: 1.2rem;
+        opacity: 0.5;
+        width: 100px;
     }
 }
