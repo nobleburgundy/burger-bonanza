@@ -1,3 +1,4 @@
+/* Overall Styles */
 h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 5rem;
@@ -9,9 +10,36 @@ h2 {
     margin-bottom: 1%;
 }
 
+.jumbo {
+    min-width: 380px;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
 button {
     border-radius: 0;
     border: none;
+}
+
+#logo {
+    width: 300px;
+}
+
+/* Waiting and Devoured Sections */
+.columns {
+    min-width: 300px;
+    width: 100%;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 2%;
 }
 
 .burger-button {
@@ -28,18 +56,17 @@ button {
     background-color: #ffba08;
 }
 
-.jumbo {
-    min-width: 380px;
-    display: block;
-    margin: auto;
-    text-align: center;
-}
-
 .devoured {
     background-color: #e63946;
     color: #ffffff;
 }
 
+.delete-button {
+    width: 50px;
+    background-color: #ffffff;
+}
+
+/* Add Burger Form Styles */
 .add-burger-form {
     margin-top: 5%;
 }
@@ -58,30 +85,6 @@ button {
 
 .add-button:hover {
     opacity: 1.0;
-}
-
-#logo {
-    width: 300px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 2%;
-}
-
-.columns {
-    min-width: 300px;
-    width: 100%;
-    text-align: center;
-}
-
-.delete-button {
-    width: 50px;
-    background-color: #ffffff;
 }
 
 /* Show the trash icon when burger button is hovered over */
@@ -103,6 +106,7 @@ small {
     font-style: italic;
 }
 
+/* Styles to target larger devices... */
 /* On large desktop devices, hide the delete button until hovering */
 /* Make h2s smaller since side by side */
 @media (min-width: 1000px) {
@@ -125,6 +129,7 @@ small {
     }
 }
 
+/* Styles to target touch-screen devices */
 /* Always show the delete icon on devices with a touch screen */
 @media (pointer:coarse) {
     .delete-button {
