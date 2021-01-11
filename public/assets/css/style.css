@@ -69,11 +69,13 @@ li {
 /* Add Burger Form Styles */
 .add-burger-form {
     margin-top: 5%;
+    width: auto;
 }
 
 .add-burger-form input {
     padding-top: 5%;
     padding-bottom: 5%;
+    width: auto;
 }
 
 .add-button {
@@ -137,5 +139,12 @@ small {
         font-size: 1.2rem;
         opacity: 0.5;
         width: 100px;
+    }
+
+    /* Make the input form, placeholder, and button text bigger on touch devices */
+    input,
+    input::placeholder,
+    .add-button {
+        font-size: 1.5rem;
     }
 }
