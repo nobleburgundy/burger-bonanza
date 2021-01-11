@@ -1,10 +1,10 @@
 # Burger Bonanza
+
 ![Top Language](https://img.shields.io/github/languages/top/nobleburgundy/burger-bonanza?color=blue)
 ![Code Size](https://img.shields.io/github/languages/code-size/nobleburgundy/burger-bonanza?color=blue)
 ![Repo Size](https://img.shields.io/github/repo-size/nobleburgundy/burger-bonanza?color=blue)
 ![Lines of Code](https://img.shields.io/tokei/lines/github/nobleburgundy/burger-bonanza?color=blue)
- [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?color=red)](https://github.com/nobleburgundy/burger-bonanza/blob/master/LICENSE)
-
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?color=red)](https://github.com/nobleburgundy/burger-bonanza/blob/master/LICENSE)
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@
 - [Contributing](#contributing)
 - [Tests](#tests)
 
-## Description 
+## Description
 
 An MVC app with a MySQL database that tracks burgers desired and burgers devoured.
 
@@ -25,13 +25,15 @@ An MVC app with a MySQL database that tracks burgers desired and burgers devoure
 2. Run the schema.sql and seed.sql in MySQL Workbench (or your favorite SQL application) to create and seed a local database for development.
 3. `cd` into the project folder.
 4. Run `npm install` to install dependencies.
-5 Run `node server.js` to run the application.
+5. Run `node server.js` to run the application.
 
-
-## Usage 
+## Usage
 
 The application has been deployed to Heroku. You can find it [here](https://jcg-burger-bonanza.herokuapp.com).
 
+### Demo
+
+![Demo](demo.gif)
 
 ## Credits
 
@@ -55,6 +57,6 @@ Contributions are welcome. If you are interested in contributing to this project
 
 No tests available at this time
 
-## Questions? 
+## Questions?
 
 Please contact me via email at goul0076@gmail.com with any questions.
