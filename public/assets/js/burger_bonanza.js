@@ -4,13 +4,20 @@ $(function () {
     // Prevent page reload on submit
     event.preventDefault();
 
-    let newBurger = { burger_name: $("#burger-input").val().trim() };
-    console.log(newBurger);
+    // check input length
+    let inputLength = $("#burger-input").val().length;
+    console.log(inputLength);
+    if (inputLength > 1 && inputLength <= 255) {
+      let newBurger = { burger_name: $("#burger-input").val().trim() };
 
-    $.ajax("/api/burgers", { type: "POST", data: newBurger }).then(function () {
-      console.log(`New burger ${newBurger} created.`);
-      location.reload();
-    });
+      $.ajax("/api/burgers", { type: "POST", data: newBurger }).then(function () {
+        console.log(`New burger ${newBurger} created.`);
+        location.reload();
+      });
+    } else {
+      // add class 'was-validated'
+      $(this).addClass("was-validated is-invalid");
+    }
   });
 
   // Handle burger button click - update 'this' burger to devoured=true
@@ -19,7 +26,6 @@ $(function () {
     const devouredVal = $(this).data("devoured") === 0;
     const objToSend = { devoured: devouredVal };
     $.ajax(`/api/burgers/${currentBurgerId}`, { type: "PUT", data: objToSend }).then(function () {
-      console.log(`Burger id ${currentBurgerId} updated to devoured=true`);
       location.reload();
     });
   });
