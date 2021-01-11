@@ -44,6 +44,11 @@ button {
     margin-top: 5%;
 }
 
+.add-burger-form input {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
 .add-button {
     color: #ffba08;
     background-color: #e63946;
@@ -111,6 +116,12 @@ small {
 
     .burger-button {
         font-size: 1rem;
+    }
+
+    /* Dont need larger input on desktop */
+    .add-burger-form input {
+        padding-top: 1%;
+        padding-bottom: 1%;
     }
 }
 
