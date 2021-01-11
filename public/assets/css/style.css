@@ -105,7 +105,15 @@ li:hover .delete-button {
 }
 
 small {
+    font-size: 1rem;
     font-style: italic;
+}
+
+/* Make the input form, placeholder, and button text bigger on touch devices */
+input[type="text"],
+input::placeholder,
+.add-button {
+    font-size: 26px;
 }
 
 /* Styles to target larger devices... */
@@ -129,6 +137,12 @@ small {
         padding-top: 1%;
         padding-bottom: 1%;
     }
+
+    input,
+    input::placeholder,
+    .add-button {
+        font-size: inherit;
+    }
 }
 
 /* Styles to target touch-screen devices */
@@ -139,12 +153,5 @@ small {
         font-size: 1.2rem;
         opacity: 0.5;
         width: 100px;
-    }
-
-    /* Make the input form, placeholder, and button text bigger on touch devices */
-    input,
-    input::placeholder,
-    .add-button {
-        font-size: 1.5rem;
     }
 }
